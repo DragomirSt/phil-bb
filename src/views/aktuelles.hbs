@@ -1,0 +1,33 @@
+{{#if admin}}
+<p>
+    <a class="link-add" href="/add-aktuelle">hinzufügen</a>
+</p>
+{{/if}}
+{{#each aktuelles}}
+<div>
+    <h3 class="workshop-titles">
+        {{name}}
+    </h3>
+    <h4 class="workshop-titles">
+        {{date}}
+    </h4>
+    <div>
+        {{title}}
+        <p style="font-size: 0.9rem;">
+            <a style="color:#00a8f0" href="/aktuelles/mehr-informationen/{{_id}}">MEHR INFORMATIONEN
+                <i style="color:#00a8f0 ; margin: 0.7rem; font-size: 1.7rem;" class="fa-solid fa-circle-info"></i>
+            </a>
+        </p>
+    </div>
+    <hr>
+    {{#if ../admin}}
+    <div class="href">
+        <p>
+            <a class="link-delete" href="/delete/aktuelle/{{_id}}">löschen</a>
+        </p>
+    </div>
+    {{/if}}
+</div>
+{{else}}
+<h1>Kein Artikeles noch</h1>
+{{/each}}

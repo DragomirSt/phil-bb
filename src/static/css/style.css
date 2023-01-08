@@ -1,0 +1,359 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    box-sizing: border-box;
+    padding-bottom: 1.4rem;
+    background-color: white;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+    border-radius: 100vw;
+    margin-block: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(22, 19, 19);
+    border-radius: 100vw;
+}
+
+@supports(scrollbar-color: black gray) {
+    * {
+        scrollbar-color: black, grey;
+    }
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 5%;
+    height: auto;
+    background-color: white;
+}
+
+nav .logo {
+    float: left;
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+nav .links {
+    float: right;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    padding: -5px;
+    margin: 5px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(63, 48, 48);
+    text-decoration: none;
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -100%;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.nav-anch:hover {
+    color: #00a8f0
+}
+
+.container {
+    margin-inline: auto;
+    padding-top: 2.8rem;
+    width: min(90%, 80rem);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding: 2.5rem 0;
+}
+
+.portrait {
+    padding: 1.4rem;
+    margin: 1rem;
+    max-width: 60%;
+    max-height: 60%;
+}
+
+.logo img {
+    max-height: 70%;
+    max-width: 70%;
+}
+
+.logo2 {
+    height: 90%;
+    width: 90%;
+}
+
+.image {
+    position: relative;
+    margin-top: 100px;
+}
+
+p {
+    max-width: 200ch;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+}
+
+li {
+    max-width: 30ch;
+}
+
+.anchs {
+    color: #00a8f0;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.anchs-ref {
+    color: #2ea3f2;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 1.7rem;
+}
+
+.ref-icon {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+ul>li>a {
+    color: #14d6c6;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.who-are-we {
+    font-size: 1.8rem;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    color: rgba(0, 0, 0, 0.788);
+}
+
+ul li::marker {
+    font-size: 2rem;
+    color: #00a8f0;
+}
+
+hr {
+    height: 2px;
+    background-color: #14d6c6;
+    border: none;
+    width: auto;
+    height: 0.12rem;
+}
+
+.workshop-titles {
+    color: #14d6c6;
+}
+
+.back {
+    margin-left: 70%;
+    font-size: 3.5rem;
+    color: #00a8f0;
+}
+
+.portrait-wer {
+    width: 60%;
+}
+
+.resume-icon {
+    font-size: 2.5rem;
+    padding-bottom: 1.4rem;
+    color: #00a8f0;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: fixed;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    width: 100%;
+    gap: 1.5rem;
+    height: 2.5rem;
+}
+
+.input {
+    width: 15rem;
+    height: 2rem;
+    font-size: 1.3rem;
+}
+
+.login-button {
+    width: 8rem;
+    height: auto;
+    border-radius: 4rem;
+    background-color: #00a8f0;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+}
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+.texterea {
+    width: 40rem;
+    height: 25rem;
+    font-size: 1.2rem;
+}
+
+.href>a {
+    width: 5rem;
+    height: 13rem;
+    margin-top: 4rem;
+}
+
+.link-delete {
+    width: 8rem;
+    height: auto;
+    border-radius: 4rem;
+    background-color: #f44336;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.link-edit {
+    width: 8rem;
+    height: auto;
+    border-radius: 4rem;
+    background-color: #0b5e11;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.link-add {
+    width: 8rem;
+    height: auto;
+    border-radius: 4rem;
+    background-color: #00a8f0;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media (min-width: 48em) {
+    .flex {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .flex>* {
+        flex-basis: 100%;
+    }
+
+    .flex>*+* {
+        margin-left: 2.5em;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    nav .logo {
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+
+    nav .links {
+        float: none;
+        position: fixed;
+        background-color: white;
+        left: 1.5rem;
+        right: 0;
+        top: 130px;
+        bottom: 100%;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    nav .links a {
+        font-size: 20px;
+    }
+
+    nav .icon-burger {
+        display: block;
+    }
+
+    nav :checked~.links {
+        bottom: 0;
+    }
+
+    nav :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    nav :checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    nav :checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+}
