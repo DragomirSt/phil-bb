@@ -1,16 +1,17 @@
 <form action="/admin" method="post">
     <div class="container">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input class="input" type="text" placeholder="...." name="username">
+            </li>
+            <li>
+                <label for="password">Password:</label>
+                <input class="input" type="password" placeholder="...." name="password">
+            </li>
+        </ul>
         <div>
-            <input class="input" type="text" placeholder="nennen.." name="username">
-        </div>
-        <br>
-        <div>
-            <input class="input" type="password" placeholder="kennwort.." name="password">
-
-        </div>
-        <br>
-        <div>
-            <button class="login-button" type="submit">Anmeldung</button>
+            <button class="login-button" type="submit">login</button>
         </div>
     </div>
 </form>

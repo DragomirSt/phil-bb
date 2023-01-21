@@ -47,7 +47,7 @@ router.get('/was', (req, res) => {
 router.get('/edit/was/:id', isAdmin, (req, res) => {
     return Was.findById(req.params.id)
         .then((wasToEdit) => {
-            res.render('edit-content', wasToEdit);
+            res.render('edit-was', wasToEdit);
         })
 });
 
@@ -87,12 +87,10 @@ router.get('/add-aktuelle', isAdmin, (req, res) => {
 })
 
 router.post('/add-aktuelle', isAdmin, (req, res) => {
-    const { name, date, title, place, description } = req.body;
+    const { title, synopsis, description } = req.body;
     return Aktuelles.create({
-        name,
-        date,
         title,
-        place,
+        synopsis,
         description
     })
         .then(() => {
@@ -120,7 +118,7 @@ router.get('/add-content', isAdmin, (req, res) => {
 });
 
 router.get('/add-was', isAdmin, (req, res) => {
-    res.render('add-content');
+    res.render('add-was');
 });
 
 router.post('/add-content', isAdmin, (req, res) => {
@@ -132,8 +130,8 @@ router.post('/add-content', isAdmin, (req, res) => {
 });
 
 router.post('/add-was', isAdmin, (req, res) => {
-    const { title, description } = req.body;
-    return Was.create({ title, description })
+    const { title, synopsis, description } = req.body;
+    return Was.create({ title, synopsis, description })
         .then(() => {
             res.redirect('/was');
         })

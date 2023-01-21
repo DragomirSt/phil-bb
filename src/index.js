@@ -27,5 +27,5 @@ mongoose.connect(process.env.MONGO_DB_PASSWORD)
         app.listen(PORT);
     })
     .catch(() => {
-        console.log('error');
+        res.render('500')
     });

@@ -1,6 +1,6 @@
 
-const mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const AdminSchema = new mongoose.Schema({
     username: String,
@@ -8,15 +8,12 @@ const AdminSchema = new mongoose.Schema({
 });
 
 AdminSchema.pre('save', function (next) {
-
     bcrypt.hash(this.password, 10)
         .then(hash => {
             this.password = hash;
-
             next();
-        })
+        });
 });
 
 const Admin = mongoose.model('Admin', AdminSchema);
-
 module.exports = Admin;

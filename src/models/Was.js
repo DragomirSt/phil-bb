@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 const WasSchema = new mongoose.Schema({
     title: String,
+    synopsis: String,
     description: String,   
 });
 

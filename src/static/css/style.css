@@ -233,6 +233,11 @@ hr {
     font-size: 1.3rem;
 }
 
+label {
+    display: inline-block;
+    width: 10rem;
+}
+
 .login-button {
     width: 8rem;
     height: auto;

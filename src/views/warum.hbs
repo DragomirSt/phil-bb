@@ -1,24 +1,23 @@
 
 {{#if admin}}
 <p>
-    <a class="link-add"  href="/add-content">hinzufügen</a>
+    <a class="link-add"  href="/add-content">add-content</a>
 </p>
 {{/if}}
 {{#each warum}}
 <div>
-    <h3>{{title}}</h3>
+    <h4>{{title}}</h4>
     <hr>
     <p>
-        <br>
         {{description}}
     </p>
     {{#if ../admin}}
     <div class="href">
         <p>
-            <a class="link-delete" href="/delete/{{_id}}">löschen</a>
+            <a class="link-delete" href="/delete/{{_id}}">delete</a>
         </p>
          <p>
-            <a class="link-edit" href="/edit/warum/{{_id}}">bearbeiten</a>
+            <a class="link-edit" href="/edit/warum/{{_id}}">edit</a>
         </p>
     </div>
     {{/if}}
