@@ -98,6 +98,24 @@ router.post('/add-aktuelle', isAdmin, (req, res) => {
         });
 });
 
+router.get('/edit/aktuelle/:id', isAdmin, (req, res) => {
+    return Aktuelles.findById(req.params.id)
+        .then((aktuelleToEdit) => {
+            res.render('edit-was', aktuelleToEdit);
+        })
+});
+
+router.post('/edit/aktuelle/:id', isAdmin, (req, res) => {
+    return Aktuelles.findByIdAndUpdate({ _id: req.params.id },
+        { $set: req.body })
+        .then(() => {
+            res.redirect('/aktuelles');
+        })
+        .catch(() => {
+            res.redirect('/');
+        });
+});
+
 router.get('/aktuelles/mehr-informationen/:id', (req, res) => {
     return Aktuelles.findById(req.params.id)
         .then((details) => {
