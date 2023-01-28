@@ -66,14 +66,6 @@ router.get('/wer', async (req, res) => {
     res.render('wer');
 });
 
-router.get('/wer/krassimir', async (req, res) => {
-    res.render('krassimir');
-});
-
-router.get('/wer/karin', async (req, res) => {
-    res.render('karin');
-});
-
 router.get('/aktuelles', (req, res) => {
     return Aktuelles.find().lean()
         .then((aktuelles) => {
