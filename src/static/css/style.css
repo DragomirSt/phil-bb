@@ -150,6 +150,10 @@ nav .icon-burger .line {
     }
 }
 
+.nav-anch:hover {
+    color: #00a8f0
+}
+
 .portrait {
     padding: 1.4rem;
     margin: 1rem;
@@ -379,6 +383,3 @@ hr {
     display: inline-block;
 }
 
-.nav-anch:hover {
-    color: #00a8f0
-}
