@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     padding-bottom: 1.4rem;
     background-color: white;
+    color: black;
 }
 
 ::-webkit-scrollbar {
@@ -96,26 +97,67 @@ nav .icon-burger .line {
     transition: all .3s ease-in-out;
 }
 
-.nav-anch:hover {
-    color: #00a8f0
+.nav-anch:is(:link, :active, :visited).active {
+    color: #00a8f0;
 }
 
-.container {
-    margin-inline: auto;
-    padding-top: 2.8rem;
-    width: min(90%, 80rem);
-}
+@media screen and (max-width: 820px) {
 
-.flex {
-    display: flex;
-    flex-direction: column;
-}
+    nav .logo {
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
 
-section {
-    padding: 2.5rem 0;
+    nav .links {
+        float: none;
+        position: fixed;
+        background-color: white;
+        left: 1.5rem;
+        right: 0;
+        top: 130px;
+        bottom: 100%;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    nav .links a {
+        font-size: 20px;
+    }
+
+    nav .icon-burger {
+        display: block;
+    }
+
+    nav :checked~.links {
+        bottom: 0;
+    }
+
+    nav :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    nav :checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    nav :checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
 }
 
 .portrait {
+    padding: 1.4rem;
+    margin: 1rem;
+    max-width: 60%;
+    max-height: 60%;
+}
+
+.portrait1 {
     padding: 1.4rem;
     margin: 1rem;
     max-width: 60%;
@@ -137,9 +179,35 @@ section {
     margin-top: 100px;
 }
 
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin-inline: auto;
+    padding-top: 2.3rem;
+    width: min(90%, 75rem);
+}
+
+.flex-index {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex>div>a {
+    background-color: #00a8f0;
+}
+
+section {
+    padding: 2.5rem 0;
+}
+
 p {
     max-width: 200ch;
     font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+
+
 }
 
 li {
@@ -193,6 +261,7 @@ hr {
     border: none;
     width: auto;
     height: 0.12rem;
+
 }
 
 .workshop-titles {
@@ -205,7 +274,7 @@ hr {
     color: #00a8f0;
 }
 
-.portrait-wer {
+.on-hover {
     width: 60%;
 }
 
@@ -227,15 +296,25 @@ hr {
     height: 2.5rem;
 }
 
+@media (min-width: 48em) {
+    .flex {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .flex>* {
+        flex-basis: 100%;
+    }
+
+    .flex>*+* {
+        margin-left: 2.5em;
+    }
+}
+
 .input {
     width: 15rem;
     height: 2rem;
     font-size: 1.3rem;
-}
-
-label {
-    display: inline-block;
-    width: 10rem;
 }
 
 .login-button {
@@ -264,7 +343,7 @@ label {
     margin-top: 4rem;
 }
 
-.link-delete {
+.link {
     width: 8rem;
     height: auto;
     border-radius: 4rem;
@@ -288,7 +367,7 @@ label {
     display: inline-block;
 }
 
-.link-add {
+.link-blue {
     width: 8rem;
     height: auto;
     border-radius: 4rem;
@@ -300,66 +379,6 @@ label {
     display: inline-block;
 }
 
-@media (min-width: 48em) {
-    .flex {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .flex>* {
-        flex-basis: 100%;
-    }
-
-    .flex>*+* {
-        margin-left: 2.5em;
-    }
-
-}
-
-@media screen and (max-width: 48em) {
-    nav .logo {
-        float: none;
-        width: auto;
-        justify-content: center;
-    }
-
-    nav .links {
-        float: none;
-        position: fixed;
-        background-color: white;
-        left: 1.5rem;
-        right: 0;
-        top: 130px;
-        bottom: 100%;
-        width: 50%;
-        height: auto;
-        flex-direction: column;
-        justify-content: space-evenly;
-        overflow: hidden;
-        transition: all .5s ease-in-out;
-    }
-
-    nav .links a {
-        font-size: 20px;
-    }
-
-    nav .icon-burger {
-        display: block;
-    }
-
-    nav :checked~.links {
-        bottom: 0;
-    }
-
-    nav :checked~.icon-burger .line:nth-child(1) {
-        transform: translateY(10px) rotate(225deg);
-    }
-
-    nav :checked~.icon-burger .line:nth-child(3) {
-        transform: translateY(-10px) rotate(-225deg);
-    }
-
-    nav :checked~.icon-burger .line:nth-child(2) {
-        opacity: 0;
-    }
+.nav-anch:hover {
+    color: #00a8f0
 }
