@@ -210,8 +210,6 @@ section {
 p {
     max-width: 200ch;
     font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
-
-
 }
 
 li {
@@ -265,7 +263,6 @@ hr {
     border: none;
     width: auto;
     height: 0.12rem;
-
 }
 
 .workshop-titles {
@@ -382,4 +379,3 @@ hr {
     text-decoration: none;
     display: inline-block;
 }
-
