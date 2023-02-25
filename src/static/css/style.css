@@ -109,6 +109,18 @@ p {
     font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
 }
 
+hr {
+    height: 2px;
+    background-color: #14d6c6;
+    border: none;
+    width: auto;
+    height: 0.12rem;
+}
+
+.workshop-titles {
+    color: #14d6c6;
+}
+
 .anchs {
     color: #00a8f0;
     font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
@@ -129,18 +141,6 @@ ul>li>a {
 ul li::marker {
     font-size: 2rem;
     color: #00a8f0;
-}
-
-hr {
-    height: 2px;
-    background-color: #14d6c6;
-    border: none;
-    width: auto;
-    height: 0.12rem;
-}
-
-.workshop-titles {
-    color: #14d6c6;
 }
 
 .back {
