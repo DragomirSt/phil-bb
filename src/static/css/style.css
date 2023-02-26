@@ -232,7 +232,7 @@ ul li::marker {
 }
 
 .link-blue {
-    width: 8rem;
+    width: 9rem;
     height: auto;
     border-radius: 4rem;
     background-color: #00a8f0;
@@ -241,6 +241,9 @@ ul li::marker {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    
 }
 
 ::-webkit-scrollbar {
