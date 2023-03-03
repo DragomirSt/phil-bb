@@ -92,11 +92,6 @@ nav .icon-burger .line {
     width: min(90%, 85rem);
 }
 
-.flex-index {
-    display: flex;
-    flex-direction: column;
-}
-
 .flex>div>a {
     background-color: #00a8f0;
 }
@@ -155,9 +150,7 @@ ul li::marker {
 }
 
 .texterea {
-    width: 40rem;
-    height: 25rem;
-    font-size: 1.2rem;
+    max-width: 100%;
 }
 
 .input {
@@ -240,10 +233,9 @@ ul li::marker {
     font-size: 1.3rem;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    
+    display: inline-block;
 }
 
 ::-webkit-scrollbar {
