@@ -308,6 +308,7 @@ ul li::marker {
         position: fixed;
         background-color: white;
         top: 70px;
+        width: 100%;
         bottom: 100%;
         height: auto;
         flex-direction: column;
